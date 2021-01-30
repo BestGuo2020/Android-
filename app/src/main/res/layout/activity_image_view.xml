@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <!-- 简单的 ImageView -->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#e90"
+        android:src="@drawable/bcbe1"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- 填满整个 ImageView -->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#e90"
+        android:src="@drawable/bcbe1"
+        android:layout_marginBottom="15dp"
+        android:scaleType="fitXY"/>
+
+    <!-- 向左或向上填满 -->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#e90"
+        android:src="@drawable/bcbe1"
+        android:layout_marginBottom="15dp"
+        android:scaleType="fitStart"/>
+
+    <!-- 居中时裁切以及加载网络图片 -->
+    <ImageView
+        android:id="@+id/network"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#e90"
+        android:src="@drawable/bcbe1"
+        android:layout_marginBottom="15dp"
+        android:scaleType="centerCrop"/>
+
+</LinearLayout>

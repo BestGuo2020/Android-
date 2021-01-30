@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="top.bestguo.androidlayout.CheckBoxActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="你喜欢哪些编程语言："
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_marginBottom="15dp"/>
+
+    <CheckBox
+        android:id="@+id/cb_java"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Java"
+        android:textSize="18sp"/>
+
+    <CheckBox
+        android:id="@+id/cb_python"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Python"
+        android:textSize="18sp"/>
+
+    <CheckBox
+        android:id="@+id/cb_js"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JavaScript"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/c_plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C++"
+        android:textSize="18sp"/>
+
+    <CheckBox
+        android:id="@+id/c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:textSize="18sp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你喜欢在哪里快乐追番："
+            android:textSize="18sp"
+            android:textColor="#000" />
+
+        <CheckBox
+            android:id="@+id/acfun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AcFun"
+            android:button="@drawable/bg_checkbox"
+            android:textSize="18sp"
+            android:layout_below="@id/text"
+            android:layout_marginTop="15dp"/>
+
+        <CheckBox
+            android:id="@+id/bilibili"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bilibili"
+            android:textSize="18sp"
+            android:button="@drawable/bg_checkbox"
+            android:layout_below="@id/text"
+            android:layout_toEndOf="@id/acfun"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"/>
+
+        <CheckBox
+            android:id="@+id/niconico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NicoNico"
+            android:textSize="18sp"
+            android:button="@drawable/bg_checkbox"
+            android:layout_toEndOf="@id/bilibili"
+            android:layout_below="@id/text"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

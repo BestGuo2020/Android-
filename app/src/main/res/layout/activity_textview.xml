@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="top.bestguo.androidlayout.TextviewActivity">
+
+    <!-- 常规设置 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="Hello，我是BestGuo"/>
+
+    <!-- 设置超出部分不显示 -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:text="Hello，我是BestGuo"/>
+
+    <!--
+        设置带图标的文字。
+        如果需要设置带图标，则需要设置一下 drawable。
+        但是，由于某些图片太大，需要使用到 java 代码。
+    -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:text="筛选"
+        android:drawableRight="@drawable/down_arrow"
+        android:drawablePadding="10dp"/>
+
+    <!--
+        设置中划线，中划线和下划线需要通过 Java 代码来实现。
+    -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello，我是BestGuo"/>
+
+    <!--
+        设置下划线，中划线和下划线需要通过 Java 代码来实现。
+    -->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello，我是BestGuo"/>
+
+    <!--
+        设置下划线，通过 html 代码
+    -->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello，我是BestGuo"/>
+
+    <!--
+        设置跑马灯。
+        注意：设置跑马灯的效果时必须设置成 singleLine，而不是 maxLine
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="Hello，我是BestGuo！Hello，我是BestGuo！Hello，我是BestGuo！"
+        android:textSize="20sp"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"/>
+
+</LinearLayout>

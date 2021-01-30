@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="top.bestguo.androidlayout.RadioButtonActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- 设置选中 -->
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="男"
+            android:textColor="#ff6600"
+            android:textSize="18sp"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="女"
+            android:textColor="#ff6600"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/radio_button"
+            android:text="男"
+            android:checked="true"
+            android:button="@null"
+            android:textAlignment="center"/>
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/radio_button"
+            android:text="女"
+            android:button="@null"
+            android:textAlignment="center"
+            android:layout_marginLeft="5dp"/>
+
+    </RadioGroup>
+
+</LinearLayout>

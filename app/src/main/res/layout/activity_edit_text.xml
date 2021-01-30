@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context="top.bestguo.androidlayout.EditTextActivity">
+
+    <!-- 设置第一个文本框，类型为用户名 -->
+    <EditText
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="账号"
+        android:textSize="20sp"
+        android:background="@drawable/input_text"
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="5dp"
+        android:padding="7dp"
+        android:maxLines="1"/>
+
+    <!-- 设置一个文本框，类型为密码 -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:layout_below="@id/user"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        android:background="@drawable/input_text"
+        android:hint="密码"
+        android:drawablePadding="5dp"
+        android:padding="7dp"
+        android:drawableStart="@drawable/lock"
+        android:maxLines="1"/>
+
+    <!-- 设置一个登录按钮 -->
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/password"
+        android:layout_marginTop="25dp"
+        android:text="登录"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:background="#6cf"/>
+
+    <!-- 设置一个注册按钮 -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/login"
+        android:layout_marginTop="15dp"
+        android:text="注册"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:background="#6cf"/>
+
+</RelativeLayout>

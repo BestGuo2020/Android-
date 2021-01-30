@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="top.bestguo.androidlayout.RelativeActivity">
+
+    <!-- 设置父空间的底部对齐和右部对齐 -->
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+    <!-- 设置父空间的底部对齐和右部对齐 -->
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#000000"/>
+
+    <!-- 设置位置view_2的右边 -->
+    <View
+        android:id="@+id/view_3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#ff0033"
+        android:layout_toEndOf="@id/view_2" />
+
+    <!-- 设置在 view_2 的底部 -->
+    <View
+        android:id="@+id/view_4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#cc4273"
+        android:layout_below="@id/view_2"/>
+
+    <!--
+        除此之外，还能设置线性布局的位置。
+        此线性布局是设置在view_4的下面。
+        因为布局之间本来就是可以套用的。
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_below="@id/view_4"
+        android:background="#0066ff"
+        android:padding="10dp">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="#ff0033" />
+
+        <!--
+            设置了一个相对布局的组件。里面放了两个元素
+        -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <!-- 设置id为view_5 和颜色 -->
+            <View
+                android:id="@+id/view_5"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#ee9c4e"/>
+
+            <!-- 设置了属性，在view_5的右边并且设置左外边距为10dp -->
+            <View
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#ee9c4e"
+                android:layout_toRightOf="@id/view_5"
+                android:layout_marginLeft="10dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
