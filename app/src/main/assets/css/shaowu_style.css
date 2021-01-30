@@ -1,0 +1,38 @@
+body{
+	background: linear-gradient(#6cf,#fff) no-repeat;
+}
+.row .clearfix .col-md-4{
+	width: 600px;
+	margin: 5px;
+}
+.team{
+	font-size: 20px;
+}
+.name{
+	text-align: center;
+	margin: 0;
+}
+.jumbotron{
+	background: rgba(238,238,238,0.5);
+}
+.navbar{
+	background: rgba(238,238,238,0.8);
+	margin-bottom: 0px;
+}
+.menu-mobile{
+	margin-bottom: 20px;
+	display: none;
+}
+.menu-mobile ul{
+	margin: 0;
+	padding: 0;
+}
+.menu-mobile ul li{
+	background: rgba(238,238,238,0.5);
+	list-style: none;
+	padding: 15px;
+	font-size: 17px;
+}
+.menu-mobile ul li:hover{
+	background: rgb(255,255,255);
+}

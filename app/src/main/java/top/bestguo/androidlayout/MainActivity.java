@@ -11,7 +11,7 @@ import top.bestguo.androidlayout.listview.ListViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10;
+    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         btn9 = (Button) findViewById(R.id.btn9);
         // 跳转到 GridView 组件示例
         btn10 = (Button) findViewById(R.id.btn10);
+        // 跳转到 WebView 组件示例
+        btn11 = (Button) findViewById(R.id.btn11);
         allButtonClick();
 
     }
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         btn8.setOnClickListener(buttonClick);
         btn9.setOnClickListener(buttonClick);
         btn10.setOnClickListener(buttonClick);
+        btn11.setOnClickListener(buttonClick);
     }
 
     private class ButtonClick implements View.OnClickListener {
@@ -91,6 +94,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn10:
                     intent = new Intent(MainActivity.this, GridViewActivity.class);
+                    break;
+                case R.id.btn11:
+                    intent = new Intent(MainActivity.this, WebViewActivity.class);
                     break;
             }
             startActivity(intent);

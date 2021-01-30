@@ -70,6 +70,12 @@
             android:layout_height="50dp"
             android:text="GridView 组件示例"/>
 
+        <Button
+            android:id="@+id/btn11"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="WebView 组件示例"/>
+
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
