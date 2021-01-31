@@ -63,6 +63,8 @@ public class MyGridViewAdapter extends BaseAdapter {
         // 加载网络图片
         Glide.with(context).load("http://www.topacg.com/wp-content/uploads" +
                 "/2020/03/frc-11c619718c036bf579c246cdd07e6d77.jpeg").into(viewHolder.imageView);
+        // 加载本地图片
+        // Glide.with(context).load("file:///android_asset/img/7.jpg").into(viewHolder.imageView);
         viewHolder.textView.setText("灶门祢豆子");
         return view;
     }
