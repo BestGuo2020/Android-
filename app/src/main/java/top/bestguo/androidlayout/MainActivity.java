@@ -11,7 +11,7 @@ import top.bestguo.androidlayout.listview.ListViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11;
+    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         btn10 = (Button) findViewById(R.id.btn10);
         // 跳转到 WebView 组件示例
         btn11 = (Button) findViewById(R.id.btn11);
+        // 跳转到 Activity 生命周期示例
+        btn12 = (Button) findViewById(R.id.btn12);
         allButtonClick();
 
     }
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         btn9.setOnClickListener(buttonClick);
         btn10.setOnClickListener(buttonClick);
         btn11.setOnClickListener(buttonClick);
+        btn12.setOnClickListener(buttonClick);
     }
 
     private class ButtonClick implements View.OnClickListener {
@@ -97,6 +100,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn11:
                     intent = new Intent(MainActivity.this, WebViewActivity.class);
+                    break;
+                case R.id.btn12:
+                    intent = new Intent(MainActivity.this, LifeCycleActivity.class);
                     break;
             }
             startActivity(intent);
