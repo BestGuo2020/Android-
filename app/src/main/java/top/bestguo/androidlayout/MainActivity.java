@@ -11,7 +11,9 @@ import top.bestguo.androidlayout.listview.ListViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12;
+    private Button btn1, btn2, btn3, btn4,
+            btn5, btn6, btn7, btn8, btn9,
+            btn10, btn11, btn12, btn13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         btn11 = (Button) findViewById(R.id.btn11);
         // 跳转到 Activity 生命周期示例
         btn12 = (Button) findViewById(R.id.btn12);
+        // 跳转到 PopupWindow 组件示例
+        btn13 = (Button) findViewById(R.id.btn13);
         allButtonClick();
 
     }
@@ -60,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         btn10.setOnClickListener(buttonClick);
         btn11.setOnClickListener(buttonClick);
         btn12.setOnClickListener(buttonClick);
+        btn13.setOnClickListener(buttonClick);
     }
 
     private class ButtonClick implements View.OnClickListener {
@@ -103,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn12:
                     intent = new Intent(MainActivity.this, LifeCycleActivity.class);
+                    break;
+                case R.id.btn13:
+                    intent = new Intent(MainActivity.this, PopupWindowActivity.class);
                     break;
             }
             startActivity(intent);

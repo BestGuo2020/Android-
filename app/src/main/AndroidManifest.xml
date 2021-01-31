@@ -28,8 +28,9 @@
         <activity android:name=".ImageViewActivity" />
         <activity android:name=".listview.ListViewActivity" />
         <activity android:name=".gridview.GridViewActivity" />
-        <activity android:name=".WebViewActivity"></activity>
-        <activity android:name=".LifeCycleActivity"></activity>
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".LifeCycleActivity" />
+        <activity android:name=".PopupWindowActivity"></activity>
     </application>
 
 </manifest>
