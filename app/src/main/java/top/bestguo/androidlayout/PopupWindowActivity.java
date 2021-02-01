@@ -2,6 +2,8 @@ package top.bestguo.androidlayout;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -25,6 +27,7 @@ public class PopupWindowActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 View view = getLayoutInflater().inflate(R.layout.layout_pop, null);
+
                 TextView good = view.findViewById(R.id.good);
                 TextView general = view.findViewById(R.id.general);
                 TextView bad = view.findViewById(R.id.bad);
@@ -36,7 +39,11 @@ public class PopupWindowActivity extends AppCompatActivity {
                 popupWindow = new PopupWindow(view, button.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT);
                 popupWindow.setOutsideTouchable(true);
                 popupWindow.setFocusable(true);
-                popupWindow.showAsDropDown(button);
+                // popupWindow.showAsDropDown(button);
+                // popupWindow.showAsDropDown(button, 120, 5);
+                // 设置根窗体
+                View rootview = LayoutInflater.from(PopupWindowActivity.this).inflate(R.layout.activity_popup_window, null);
+                popupWindow.showAtLocation(rootview, Gravity.BOTTOM, 0, 0);
             }
         });
     }
@@ -47,6 +54,8 @@ public class PopupWindowActivity extends AppCompatActivity {
         public void onClick(View v) {
             TextView tv = (TextView) v;
             Toast.makeText(PopupWindowActivity.this, "你点击的是：" + tv.getText(), Toast.LENGTH_SHORT).show();
+            // 点击之后，将其消失
+            popupWindow.dismiss();
         }
     }
 }
