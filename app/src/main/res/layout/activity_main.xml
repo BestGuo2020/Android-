@@ -86,7 +86,13 @@
             android:id="@+id/btn13"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="PopupWindow 生命周期"/>
+            android:text="PopupWindow 组件示例"/>
+
+        <Button
+            android:id="@+id/btn14"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="数据存储示例"/>
 
         <HorizontalScrollView
             android:layout_width="wrap_content"

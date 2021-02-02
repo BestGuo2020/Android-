@@ -30,7 +30,9 @@
         <activity android:name=".gridview.GridViewActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".LifeCycleActivity" />
-        <activity android:name=".PopupWindowActivity"></activity>
+        <activity android:name=".PopupWindowActivity" />
+        <activity android:name=".datastorage.DataStorageActivity" />
+        <activity android:name=".datastorage.SharedPreferenceActivity"></activity>
     </application>
 
 </manifest>
