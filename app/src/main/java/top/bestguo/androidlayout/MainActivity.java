@@ -9,12 +9,13 @@ import android.widget.Button;
 import top.bestguo.androidlayout.datastorage.DataStorageActivity;
 import top.bestguo.androidlayout.gridview.GridViewActivity;
 import top.bestguo.androidlayout.listview.ListViewActivity;
+import top.bestguo.androidlayout.recyclerview.RecyclerViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btn1, btn2, btn3, btn4,
             btn5, btn6, btn7, btn8, btn9,
-            btn10, btn11, btn12, btn13, btn14;
+            btn10, btn11, btn12, btn13, btn14, btn15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         btn13 = (Button) findViewById(R.id.btn13);
         // 跳转到 PopupWindow 组件示例
         btn14 = (Button) findViewById(R.id.btn14);
+        // 跳转到 RecyclerView 组件示例
+        btn15 = (Button) findViewById(R.id.btn15);
         allButtonClick();
 
     }
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         btn12.setOnClickListener(buttonClick);
         btn13.setOnClickListener(buttonClick);
         btn14.setOnClickListener(buttonClick);
+        btn15.setOnClickListener(buttonClick);
     }
 
     private class ButtonClick implements View.OnClickListener {
@@ -118,6 +122,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn14:
                     intent = new Intent(MainActivity.this, DataStorageActivity.class);
+                    break;
+                case R.id.btn15:
+                    intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
                     break;
             }
             startActivity(intent);
