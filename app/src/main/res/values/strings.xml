@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">AndroidLayout</string>
     <string name="linear_layout">LinearLayout  布局示例</string>
+    <string name="btn17">File 文件存储示例</string>
+    <string name="btn16">Dialog 示例</string>
+    <string name="btn15">RecycleView 示例</string>
+    <string name="btn14">数据存储示例</string>
+    <string name="btn13">PopupWindow 组件示例</string>
+    <string name="btn12">Activity 生命周期</string>
+    <string name="btn11">WebView 组件示例</string>
+    <string name="btn10">GridView 组件示例</string>
+    <string name="btn8">ImageView 组件示例</string>
+    <string name="btn9">ListView 组件示例</string>
+    <string name="btn7">CheckBox 组件示例</string>
+    <string name="btn6">RadioButton 组件示例</string>
+    <string name="btn5">EditText 组件示例</string>
+    <string name="btn4">Button 组件示例</string>
+    <string name="btn3">TextView 组件示例</string>
+    <string name="btn2">RelativeLayout 布局示例</string>
 </resources>
