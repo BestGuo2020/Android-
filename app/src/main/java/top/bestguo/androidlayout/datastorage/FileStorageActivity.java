@@ -121,6 +121,7 @@ public class FileStorageActivity extends AppCompatActivity {
         return null;
     }
 
+    // 保存数据到外部存储
     private void saveOuter(String context) {
         Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC);
         FileOutputStream fos = null;
@@ -151,6 +152,7 @@ public class FileStorageActivity extends AppCompatActivity {
         }
     }
 
+    // 从外部存储读取数据
     private String readOuter() {
         FileInputStream fos = null;
         // 获取外部存储目录
