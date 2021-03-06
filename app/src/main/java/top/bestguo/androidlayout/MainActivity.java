@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import top.bestguo.androidlayout.datastorage.DataStorageActivity;
+import top.bestguo.androidlayout.datastorage.FileStorageActivity;
 import top.bestguo.androidlayout.dialog.AlertDialogActivity;
 import top.bestguo.androidlayout.gridview.GridViewActivity;
 import top.bestguo.androidlayout.listview.ListViewActivity;
@@ -16,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn1, btn2, btn3, btn4,
             btn5, btn6, btn7, btn8, btn9,
-            btn10, btn11, btn12, btn13, btn14, btn15, btn16;
+            btn10, btn11, btn12, btn13, btn14,
+            btn15, btn16;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
