@@ -14,7 +14,7 @@ import top.bestguo.androidlayout.R;
 
 public class AlertDialogActivity extends AppCompatActivity {
 
-    private Button btnAlertDialog1, btnAlertDialog2, btnAlertDialog3, btnAlertDialog4;
+    private Button btnAlertDialog1, btnAlertDialog2, btnAlertDialog3, btnAlertDialog4, btnCustomDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class AlertDialogActivity extends AppCompatActivity {
         btnAlertDialog2 = findViewById(R.id.btn_alert_dialog_2); // 单选按钮，无默认指定选中
         btnAlertDialog3 = findViewById(R.id.btn_alert_dialog_3); // 单选按钮，可默认指定选中
         btnAlertDialog4 = findViewById(R.id.btn_alert_dialog_4); // 多选按钮，可默认指定多个选中
+        btnCustomDialog = findViewById(R.id.btn_custom_dialog); // 自定义对话框
 
         buttonClick();
     }
@@ -35,6 +36,7 @@ public class AlertDialogActivity extends AppCompatActivity {
         btnAlertDialog2.setOnClickListener(onClick);
         btnAlertDialog3.setOnClickListener(onClick);
         btnAlertDialog4.setOnClickListener(onClick);
+        btnCustomDialog.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -111,6 +113,24 @@ public class AlertDialogActivity extends AppCompatActivity {
                             Toast.makeText(AlertDialogActivity.this, "你喜欢在“" + sb.toString() + "”追番", Toast.LENGTH_LONG).show();
                         }
                     }).show();
+                    break;
+                case R.id.btn_custom_dialog:
+                    CustomDialog customDialog = new CustomDialog(AlertDialogActivity.this, R.style.CustomDialog);
+                    customDialog.setTitle("警告");
+                    customDialog.setMessage("你的手机电量过低，请充电");
+                    customDialog.setCancel("取消", new CustomDialog.OnCancelListener() {
+                        @Override
+                        public void onClick(CustomDialog dialog) {
+                            Toast.makeText(AlertDialogActivity.this, "点击了取消按钮", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    customDialog.setOk("确定", new CustomDialog.OnOkListener() {
+                        @Override
+                        public void onClick(CustomDialog dialog) {
+                            Toast.makeText(AlertDialogActivity.this, "点击了确定按钮", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    customDialog.show();
                     break;
             }
         }
